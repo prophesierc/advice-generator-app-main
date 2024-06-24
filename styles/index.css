@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap");
+:root{
+    /* Colors */
+
+    /* Primary */
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --clr-grayish-blue: hsl(217, 19%, 38%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+
+    /* Typography */
+
+    /* Body Copy */
+    --fs-quote: 28px;
+
+    /* Font */
+    --ff-Manrope: 'Manrope', sans-serif;
+    --fw-800: 800;
+    --fw-700: 700;
+    --fw-400: 400;
+}
+
+/* reset */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--clr-dark-blue);
+    height: 85vh;
+    width: 100vw;
+}
+main{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.main-container{
+    /* container should have 2x more bottom margin than top relative to body */
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-dark-grayish-blue);
+    min-height: 400px;
+    width: 90vw;
+    max-width: 500px;
+    font-family: var(--ff-Manrope);
+    border-radius: 12px;
+}
+#advice-number-container{
+    color: var(--clr-neon-green);
+    padding-top: 2em;
+    text-align: center;
+    font-size: 10px;
+    font-weight: var(--fw-700);
+    letter-spacing: 3px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+#advice-number-container::before{
+    content: 'ADVICE #';
+}
+#advice-text{
+    color: var(--clr-light-cyan);
+    font-weight: var(--fw-700);
+    font-size: var(--fs-quote);
+    width: 85%;
+    text-align: center;
+}
+
+.divider-image-container{
+    background-image: url('/images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 20px; 
+    position: relative;
+    bottom: -20px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.icon-dice-container{
+    background-image: url('/images/icon-dice.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px; 
+    width: 60px; 
+    border-radius: 50%;
+    background-color: var(--clr-neon-green);
+    margin-top: 3em;
+    margin-bottom: -2em;
+    cursor: pointer;
+    border: none;
+}
+.icon-dice-container:active{
+    box-shadow: 0px 0px 20px 5px rgba(82,255,169,0.9);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    writing-mode: vertical-rl;
+    color: var(--clr-neon-green);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+@media screen and (min-width: 500px) {
+    body{
+        height: 100vh;
+    }
+    .main-container{
+        min-height: 350px;
+    }
+    .divider-image-container {
+        background-image: url('/images/pattern-divider-desktop.svg');
+    }
+}
