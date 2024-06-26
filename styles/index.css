@@ -34,7 +34,6 @@ body{
     background-color: var(--clr-dark-blue);
     height: 85vh;
     width: 100vw;
-    overflow-y: hidden;
 }
 main{
     display: flex; 
